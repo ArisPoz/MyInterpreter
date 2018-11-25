@@ -1,0 +1,4 @@
+bison -d perl_bison.y
+flex perl_tokens.l
+gcc perl_bison.tab.c lex.yy.c -lfl -o perl_compiler
+./perl_compiler < input.c
